@@ -1,0 +1,30 @@
+@import "./tokens.css";
+
+@theme {
+  --font-sans: "Noto Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-heading: Roboto, ui-sans-serif, system-ui, sans-serif;
+  --radius-sm: 3.5px;
+  --radius-md: 7px;
+  --radius-lg: 7px;
+  --radius-xl: 7px;
+  --radius-2xl: 7px;
+  --radius-box: 7px;
+
+  --color-bg: var(--c-bg);
+  --color-bg-page: var(--c-bg-page);
+  --color-bg-low: var(--c-bg-low);
+  --color-bg-mid: var(--c-bg-mid);
+  --color-bg-zebra: var(--c-bg-zebra);
+  --color-bg-input: var(--c-bg-input);
+  --color-font: var(--c-font);
+  --color-font-dim: var(--c-font-dim);
+  --color-primary: var(--c-primary);
+  --color-secondary: var(--c-secondary);
+  --color-accent: var(--c-accent);
+  --color-good: var(--c-good);
+  --color-brag: var(--c-brag);
+  --color-bad: var(--c-bad);
+  --color-link: var(--c-link);
+  --color-border: var(--c-border);
+  --color-over: var(--c-over);
+}

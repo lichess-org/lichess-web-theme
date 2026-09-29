@@ -1,0 +1,148 @@
+/* Named pieces that static HTML and Tailwind apps can both use. */
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    font-size: 14px;
+  }
+
+  body {
+    margin: 0;
+    color: var(--c-font);
+    font-family: var(--font-sans);
+    background:
+      linear-gradient(to bottom, var(--c-body-gradient), var(--c-bg-page) 116px)
+        no-repeat,
+      var(--c-bg-page);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-heading);
+    font-weight: 300;
+  }
+
+  a {
+    color: var(--c-link);
+    text-decoration: none;
+  }
+
+  a:hover,
+  a:focus-visible {
+    color: var(--c-link-hover);
+  }
+
+  code {
+    font-size: 0.9em;
+    border: 1px solid var(--c-border);
+    background: var(--c-bg-low);
+    border-radius: var(--radius);
+    padding: 2px 7px;
+  }
+
+  pre code {
+    border: 0;
+    background: transparent;
+    padding: 0;
+    border-radius: 0;
+    font-size: inherit;
+    color: inherit;
+  }
+}
+
+@layer components {
+  .box {
+    border: 1px solid var(--c-border);
+    background: var(--c-bg-box);
+    border-radius: var(--radius);
+    box-shadow: 0 1px 3px hsl(0 0% 0% / 0.15);
+  }
+
+  .form-input {
+    border: 1px solid var(--c-border);
+    background: var(--c-bg-input);
+    color: var(--c-font);
+    border-radius: var(--radius);
+    outline: none;
+  }
+
+  .form-input:focus,
+  .form-input:focus-visible {
+    outline: 2px solid var(--c-primary);
+    outline-offset: -2px;
+  }
+
+  .btn-primary,
+  .btn-secondary,
+  .btn-danger {
+    display: inline-block;
+    cursor: pointer;
+    border: none;
+    border-radius: var(--radius);
+    padding: 0.8em 1em;
+    font-weight: 500;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    box-shadow: 0 1px 3px hsl(0 0% 0% / 0.2);
+    transition:
+      filter 150ms ease,
+      background-color 150ms ease,
+      color 150ms ease;
+  }
+
+  .btn-primary {
+    background: var(--c-primary);
+    color: var(--c-over);
+  }
+
+  .btn-primary:hover:not(:disabled) {
+    color: var(--c-over);
+    filter: brightness(1.15);
+  }
+
+  .btn-secondary {
+    background: linear-gradient(
+      to bottom,
+      var(--c-metal-top),
+      var(--c-metal-bottom)
+    );
+    color: var(--c-font);
+  }
+
+  .btn-secondary:hover:not(:disabled) {
+    color: var(--c-font);
+    background: linear-gradient(
+      to bottom,
+      var(--c-metal-top-hover),
+      var(--c-metal-bottom-hover)
+    );
+  }
+
+  .btn-danger {
+    background: var(--c-bad);
+    color: var(--c-over);
+  }
+
+  .btn-danger:hover:not(:disabled) {
+    color: var(--c-over);
+    background: hsl(from var(--c-bad) h s calc(l + 8));
+  }
+
+  .btn-primary:disabled,
+  .btn-secondary:disabled,
+  .btn-danger:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+    filter: none;
+  }
+}

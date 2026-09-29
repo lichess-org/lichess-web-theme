@@ -1,0 +1,145 @@
+/* High-level Lichess (lila) color tokens. Dark is the default, as on lichess.org. */
+
+:root {
+  --font-sans: "Noto Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-heading: Roboto, ui-sans-serif, system-ui, sans-serif;
+  --radius: 7px;
+
+  --site-hue: 37deg;
+  --c-bg: hsl(var(--site-hue) 7% 14%);
+  --c-bg-box: var(--c-bg);
+  --c-bg-high: var(--c-bg);
+  --c-bg-mid: hsl(var(--site-hue) 7% 16%);
+  --c-bg-low: hsl(var(--site-hue) 7% 22%);
+  --c-bg-popup: var(--c-bg-low);
+  --c-bg-page: hsl(var(--site-hue) 10% 8%);
+  --c-bg-zebra: hsl(var(--site-hue) 5% 19%);
+  --c-bg-input: hsl(from var(--c-bg-page) h s 12% / alpha);
+  --c-body-gradient: hsl(var(--site-hue) 12% 16%);
+  --c-font: hsl(0 0% 73%);
+  --c-font-dim: hsl(0 0% 58%);
+  --c-font-dimmer: hsl(from var(--c-font) h s 42% / alpha);
+  --c-font-clear: hsl(from var(--c-font) h s 80% / alpha);
+  --c-font-clearer: hsl(from var(--c-font) h s 89% / alpha);
+  --c-font-page: var(--c-font-dim);
+  --c-dimmer: black;
+  --c-clearer: white;
+  --c-shade: hsl(0 0% 30%);
+  --c-metal-top: hsl(var(--site-hue) 7% 22%);
+  --c-metal-bottom: hsl(var(--site-hue) 5% 19%);
+  --c-metal-top-hover: hsl(var(--site-hue) 7% 25%);
+  --c-metal-bottom-hover: hsl(var(--site-hue) 5% 22%);
+  --c-border: hsl(0 0% 25%);
+  --c-border-page: hsl(0 0% 22%);
+  --c-primary: hsl(209 79% 56%);
+  --c-primary-dim: color-mix(in oklab, var(--c-dimmer) 15%, var(--c-primary));
+  --c-primary-clear: color-mix(
+    in oklab,
+    var(--c-clearer) 20%,
+    var(--c-primary)
+  );
+  --c-secondary: hsl(88 62% 37%);
+  --c-link: var(--c-primary);
+  --c-link-hover: color-mix(
+    in oklab,
+    var(--c-clearer) 25%,
+    hsl(from var(--c-primary) h 100% l)
+  );
+  --c-over: white;
+  --c-brag: hsl(var(--site-hue) 74% 43%);
+  --c-accent: hsl(22 100% 42%);
+  --c-good: hsl(88 62% 37%);
+  --c-warn: var(--c-brag);
+  --c-bad: hsl(0 60% 50%);
+
+  --c-primary-bg: color-mix(in oklab, var(--c-primary) 14%, transparent);
+  --c-primary-bg-hover: color-mix(in oklab, var(--c-primary) 24%, transparent);
+  --c-primary-bg-selected: color-mix(
+    in oklab,
+    var(--c-primary) 12%,
+    var(--c-bg-low)
+  );
+  --c-primary-border: color-mix(
+    in oklab,
+    var(--c-primary) 40%,
+    var(--c-border)
+  );
+  --c-good-bg: color-mix(in oklab, var(--c-good) 16%, transparent);
+  --c-good-border: color-mix(in oklab, var(--c-good) 28%, transparent);
+  --c-warn-bg: color-mix(in oklab, var(--c-brag) 16%, var(--c-bg));
+  --c-warn-bg-hover: color-mix(in oklab, var(--c-brag) 24%, var(--c-bg));
+  --c-warn-border: color-mix(in oklab, var(--c-brag) 42%, transparent);
+  --c-bad-bg: color-mix(in oklab, var(--c-bad) 16%, var(--c-bg));
+  --c-bad-bg-hover: color-mix(in oklab, var(--c-bad) 24%, var(--c-bg));
+  --c-bad-border: color-mix(in oklab, var(--c-bad) 42%, transparent);
+}
+
+html.light {
+  --c-bg: hsl(0 0% 100%);
+  --c-bg-page: hsl(var(--site-hue) 10% 92%);
+  --c-bg-low: hsl(0 0% 89%);
+  --c-bg-mid: hsl(var(--site-hue) 7% 97%);
+  --c-bg-zebra: hsl(var(--site-hue) 12% 96.5%);
+  --c-bg-popup: hsl(0 0% 100%);
+  --c-bg-input: hsl(from var(--c-bg-page) h s 97);
+  --c-body-gradient: hsl(var(--site-hue) 12% 84%);
+  --c-font: hsl(0 0% 30%);
+  --c-font-dim: hsl(0 0% 47%);
+  --c-font-dimmer: hsl(from var(--c-font) h s 70);
+  --c-font-clear: hsl(from var(--c-font) h s 12);
+  --c-font-clearer: black;
+  --c-font-page: hsl(from var(--c-font) h s 37);
+  --c-dimmer: white;
+  --c-clearer: black;
+  --c-shade: hsl(0 0% 84%);
+  --c-metal-top: hsl(0 0% 96%);
+  --c-metal-bottom: hsl(0 0% 93%);
+  --c-metal-top-hover: hsl(0 0% 98%);
+  --c-metal-bottom-hover: hsl(0 0% 95%);
+  --c-border: hsl(0 0% 85%);
+  --c-border-page: hsl(0 0% 80%);
+  --c-primary: hsl(209 77% 46%);
+  --c-primary-dim: color-mix(in oklab, var(--c-dimmer) 17%, var(--c-primary));
+  --c-link-hover: color-mix(
+    in oklab,
+    var(--c-clearer) 35%,
+    hsl(from var(--c-primary) h 100 l)
+  );
+  --c-brag: hsl(var(--site-hue) 74% 48%);
+}
+
+@media (prefers-color-scheme: light) {
+  html:not(.dark):not([data-theme="dark"]) {
+    --c-bg: hsl(0 0% 100%);
+    --c-bg-page: hsl(var(--site-hue) 10% 92%);
+    --c-bg-low: hsl(0 0% 89%);
+    --c-bg-mid: hsl(var(--site-hue) 7% 97%);
+    --c-bg-zebra: hsl(var(--site-hue) 12% 96.5%);
+    --c-bg-popup: hsl(0 0% 100%);
+    --c-bg-input: hsl(from var(--c-bg-page) h s 97);
+    --c-body-gradient: hsl(var(--site-hue) 12% 84%);
+    --c-font: hsl(0 0% 30%);
+    --c-font-dim: hsl(0 0% 47%);
+    --c-font-dimmer: hsl(from var(--c-font) h s 70);
+    --c-font-clear: hsl(from var(--c-font) h s 12);
+    --c-font-clearer: black;
+    --c-font-page: hsl(from var(--c-font) h s 37);
+    --c-dimmer: white;
+    --c-clearer: black;
+    --c-shade: hsl(0 0% 84%);
+    --c-metal-top: hsl(0 0% 96%);
+    --c-metal-bottom: hsl(0 0% 93%);
+    --c-metal-top-hover: hsl(0 0% 98%);
+    --c-metal-bottom-hover: hsl(0 0% 95%);
+    --c-border: hsl(0 0% 85%);
+    --c-border-page: hsl(0 0% 80%);
+    --c-primary: hsl(209 77% 46%);
+    --c-primary-dim: color-mix(in oklab, var(--c-dimmer) 17%, var(--c-primary));
+    --c-link-hover: color-mix(
+      in oklab,
+      var(--c-clearer) 35%,
+      hsl(from var(--c-primary) h 100 l)
+    );
+    --c-brag: hsl(var(--site-hue) 74% 48%);
+  }
+}
