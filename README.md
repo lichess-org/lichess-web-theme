@@ -1,10 +1,10 @@
 # @lichess/web-theme
 
-Temporary in-repo copy of a shared Lichess look: colors, type, and a few named
-classes. Intended to move to its own repository later.
+Shared Lichess look: colors, type, and a few named classes.
 
 Values are a high-level extract of lila’s dark/light themes (`ui/lib/css/theme`),
-not a full port of the lichess.org stylesheet.
+not a full port of the lichess.org stylesheet. Licensed under
+[AGPL-3.0-or-later](./LICENSE).
 
 ## Plain HTML / static sites
 
@@ -28,5 +28,4 @@ statements). Then Tailwind, then this package:
 @import "@lichess/web-theme/components.css";
 ```
 
-Until this is published, Payment Portal imports the files by relative path.
 Dark is the default. Light uses `html.light`.
