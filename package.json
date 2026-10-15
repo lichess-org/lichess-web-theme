@@ -8,6 +8,12 @@
     "url": "git+https://github.com/lichess-org/lichess-web-theme.git"
   },
   "type": "module",
+  "files": [
+    "colors.css",
+    "components.css",
+    "tailwind.css",
+    "lichess.css"
+  ],
   "exports": {
     "./colors.css": "./colors.css",
     "./components.css": "./components.css",

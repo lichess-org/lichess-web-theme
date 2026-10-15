@@ -9,7 +9,10 @@ website closer to the appearance of Lichess.org.
 ## Plain HTML / static site usage
 
 ```html
-<link rel="stylesheet" href="./lichess.css" />
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/lichess-org/lichess-web-theme@main/lichess.css"
+/>
 <button class="btn-primary">Submit</button>
 ```
 
