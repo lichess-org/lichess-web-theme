@@ -1,5 +1,3 @@
-/* High-level Lichess (lila) color tokens. Dark is the default, as on lichess.org. */
-
 :root {
   --font-sans: "Noto Sans", ui-sans-serif, system-ui, sans-serif;
   --font-heading: Roboto, ui-sans-serif, system-ui, sans-serif;

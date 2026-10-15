@@ -1,31 +1,25 @@
-# @lichess/web-theme
+# Lichess Web Theme
 
-Shared Lichess look: colors, type, and a few named classes.
+This repo contains Lichess styles that can be used by other websites and apps.
 
-Values are a high-level extract of lila’s dark/light themes (`ui/lib/css/theme`),
-not a full port of the lichess.org stylesheet. Licensed under
-[AGPL-3.0-or-later](./LICENSE).
+Styling was extracted from lila’s dark/light themes (`ui/lib/css/theme`), but it
+is not 100% accurate or complete. It's a good starting point for getting a
+website closer to the appearance of Lichess.org.
 
-## Plain HTML / static sites
+## Plain HTML / static site usage
 
 ```html
 <link rel="stylesheet" href="./lichess.css" />
 <button class="btn-primary">Submit</button>
 ```
 
-`lichess.css` pulls in Noto Sans and Roboto from Google Fonts, then tokens and
-named classes.
+## Tailwind app usage
 
-## Tailwind v4 apps
-
-The Google Fonts `@import` must come first (CSS rule: imports before other
-statements). Then Tailwind, then this package:
+The Google Fonts `@import` must come first, then Tailwind, then this package:
 
 ```css
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Roboto:wght@300;400;500;700&display=swap");
 @import "tailwindcss";
-@import "@lichess/web-theme/tailwind.css";
-@import "@lichess/web-theme/components.css";
+@import "lichess-web-theme/tailwind.css";
+@import "lichess-web-theme/components.css";
 ```
-
-Dark is the default. Light uses `html.light`.

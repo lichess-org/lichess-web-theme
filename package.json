@@ -1,11 +1,11 @@
 {
-  "name": "@lichess/web-theme",
-  "private": true,
+  "name": "lichess-web-theme",
   "version": "0.0.1",
+  "description": "Lichess colors and components for other websites and apps.",
   "license": "AGPL-3.0-or-later",
   "type": "module",
   "exports": {
-    "./tokens.css": "./tokens.css",
+    "./colors.css": "./colors.css",
     "./components.css": "./components.css",
     "./tailwind.css": "./tailwind.css",
     "./lichess.css": "./lichess.css"

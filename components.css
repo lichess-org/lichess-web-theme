@@ -1,5 +1,3 @@
-/* Named pieces that static HTML and Tailwind apps can both use. */
-
 @layer base {
   *,
   *::before,

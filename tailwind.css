@@ -1,4 +1,4 @@
-@import "./tokens.css";
+@import "./colors.css";
 
 @theme {
   --font-sans: "Noto Sans", ui-sans-serif, system-ui, sans-serif;
