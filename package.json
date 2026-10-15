@@ -3,6 +3,10 @@
   "version": "0.0.1",
   "description": "Lichess colors and components for other websites and apps.",
   "license": "AGPL-3.0-or-later",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lichess-org/lichess-web-theme.git"
+  },
   "type": "module",
   "exports": {
     "./colors.css": "./colors.css",
