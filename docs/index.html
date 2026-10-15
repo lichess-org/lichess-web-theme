@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Lichess Web Theme</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/lichess-org/lichess-web-theme@main/lichess.css"
+    />
+    <style>
+      main {
+        max-width: 40rem;
+        margin: 0 auto;
+        padding: 2rem 1rem 4rem;
+      }
+
+      section {
+        margin-top: 1.5rem;
+      }
+
+      .row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        align-items: center;
+      }
+
+      .form-input {
+        padding: 0.6em 0.8em;
+        font: inherit;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Lichess Web Theme</h1>
+      <p>
+        Styles loaded from
+        <a href="https://cdn.jsdelivr.net/gh/lichess-org/lichess-web-theme@main/lichess.css">jsDelivr on <code>main</code></a>.
+        This page follows the branch, so it updates when <code>lichess.css</code> changes.
+      </p>
+      <p>
+        <button type="button" class="btn-secondary" id="theme">Toggle theme</button>
+      </p>
+
+      <section class="box" style="padding: 1rem 1.25rem">
+        <h2>Box</h2>
+        <p>
+          A <a href="#buttons">link</a> inside a <code>.box</code>, with the page background behind it.
+        </p>
+      </section>
+
+      <section id="buttons">
+        <h2>Buttons</h2>
+        <div class="row">
+          <button type="button" class="btn-primary">Primary</button>
+          <button type="button" class="btn-secondary">Secondary</button>
+          <button type="button" class="btn-danger">Danger</button>
+          <button type="button" class="btn-primary" disabled>Disabled</button>
+        </div>
+      </section>
+
+      <section>
+        <h2>Field</h2>
+        <form class="row" action="#">
+          <input class="form-input" type="text" name="name" placeholder="Username" />
+          <button type="submit" class="btn-primary">Submit</button>
+        </form>
+      </section>
+    </main>
+    <script>
+      document.getElementById("theme").addEventListener("click", () => {
+        const root = document.documentElement;
+        const currentlyLight =
+          root.classList.contains("light") ||
+          (!root.classList.contains("dark") &&
+            matchMedia("(prefers-color-scheme: light)").matches);
+        root.classList.remove("light", "dark");
+        root.classList.add(currentlyLight ? "dark" : "light");
+      });
+    </script>
+  </body>
+</html>
